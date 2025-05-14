@@ -15,8 +15,11 @@
     <main class="flex-grow w-full">
         @yield('content')
     </main>
-
+    
     @include('components.footer')
 
 </body>
 </html>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+

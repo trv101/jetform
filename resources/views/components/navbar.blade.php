@@ -8,10 +8,10 @@
   </a>
   
         <!-- Desktop Nav -->
-        <div class="hidden lg:flex space-x-4">
+        <div class="hidden lg:flex space-x-6">
           <a href="#" class="text-black hover:text-blue-600">My workspace</a>
-          <a href="#" class="text-black hover:text-blue-600">Pricing</a>
-          <a href="#" class="text-black hover:text-blue-600">Support</a>
+          <a href="{{ route('pricing') }}" class="text-black hover:text-blue-600">Pricing</a>
+          <a href="{{ route('support') }}"class="text-black hover:text-blue-600">Support</a>
           
         </div>
   

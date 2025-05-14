@@ -7,7 +7,7 @@
             <h3 class="text-2xl font-bold text-orange-400 font-poppins">EASIEST ONLINE FORM BUILDER</h3>
             <h1 class="mt-4 text-5xl font-bold text-blue-600">Powerful forms get it done.</h1>
             <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-                We believe the right form makes all the difference. Go from busywork to less work with powerful forms that use conditional logic, accept payments, generate reports, and automate workflows.
+                We believe the right form makes all the difference. Go from busywork to less work with powerful forms that ease your workflow.
             </p>
 
             @include('components.signup-card')
@@ -59,7 +59,7 @@
         <div class="p-4 w-full">
           <h3 class="text-2xl font-bold text-gray-900 mb-3 font-poppins">Starts from only $1</h3> <br>
           <p class="text-gray-600 text-base leading-relaxed">
-            Get started with all essential features at just $1. Scale as you grow — no hidden fees, no surprises.
+            Get started with all essential features at just $1. No hidden fees, no surprises.
           </p>
         </div>
       </div>
@@ -74,7 +74,7 @@
         <section class="w-full bg-blue-950 py-14 px-4 sm:px-6 lg:px-8 text-white">
             <h3 class="text-5xl mt-4 font-bold font-poppins">Ready to get started?</h3>
             <p class="mt-4 text-lg max-w-3xl mx-auto">
-                Create your first form and see why more than 30 million users around the world trust Jetform.
+                Create your first form — fast, flexible, and free.
             </p>
             <div class="mt-6">
                 @include('components.signup-card')

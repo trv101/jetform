@@ -1,4 +1,5 @@
 <footer class="bg-gray-100 text-gray-700 mt-4">
+  
   <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
     <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 text-center sm:text-left">
 

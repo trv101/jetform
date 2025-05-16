@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <main class="py-20 text-center">
+    <main class="pt-20 text-center">
         <!-- Hero Section -->
         <section class="px-4 sm:px-6 lg:px-8">
             <h3 class="text-2xl font-bold text-orange-400 font-poppins">EASIEST ONLINE FORM BUILDER</h3>

@@ -12,28 +12,28 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'role:Admin|Super-Admin','verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::resource("users", UserController::class);
-    Route::resource("roles", RoleController::class);
+    Route::view('/myWorkspace', 'pages.myWorkspace')->name('myWorkspace');
+
+    
 });
 
 
-// Route::middleware('role:Admin')->group(function () {
-//     Route::resource("users", UserController::class);
-//     Route::resource("roles", RoleController::class);
-// });
+Route::middleware('role:Admin|Super-Admin')->group(function () {
+    Route::resource("users", UserController::class);
+    Route::resource("roles", RoleController::class);
+});
 
 
 
 
 Route::view('/pricing', 'pages.pricing')->name('pricing');
 Route::view('/support', 'pages.support')->name('support');
-Route::view('/myWorkspace', 'pages.myWorkspace')->name('myWorkspace');
 
 Route::post('/support/email', [SupportController::class, 'send'])->name('support.email');
 

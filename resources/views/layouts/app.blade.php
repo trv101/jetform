@@ -17,7 +17,11 @@
     </head>
     <body class="flex flex-col min-h-screen text-gray-900 bg-white">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('components.navbar')
+            @auth
+                @include('components.navbar-auth')
+            @else
+                @include('components.navbar')
+            @endauth
 
             <!-- Page Heading -->
             @isset($header)

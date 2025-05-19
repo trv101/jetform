@@ -19,6 +19,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::view('/myWorkspace', 'pages.myWorkspace')->name('myWorkspace');
+    Route::get('/form-builder', [FormController::class, 'builder'])->name('form.builder');
+
 
     
 });

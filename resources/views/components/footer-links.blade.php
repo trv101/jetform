@@ -1,11 +1,11 @@
-<footer class="bg-white text-xl text-gray-700 border-t border-gray-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+<footer class="{{ Auth::check() ? 'bg-[#12246e] text-xl text-white' : 'bg-white text-xl text-gray-700'}} border-t border-gray-200">
+  <div class="max-w-7xl mx-auto pb-12 sm:px-6 lg:px-8 mt-12">
     <div class="flex justify-center">
-      <div class="inline-grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 lg:gap-68 text-left mt-4">
+      <div class="inline-grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 lg:gap-64 text-left mt-2">
 
         <!-- Column 1 -->
         <div>
-          <h4 class="font-bold mb-6 text-blue-950">JetForm</h4>
+          <h4 class="{{ Auth::check() ? 'text-white': 'text-blue-950' }} font-bold mb-6">JetForm</h4>
           <ul class="space-y-2">
             <li><a href="#" class="hover:underline">Signup</a></li>
             <li><a href="#" class="hover:underline">Create a Form</a></li>
@@ -16,7 +16,7 @@
 
         <!-- Column 2 -->
         <div>
-          <h4 class="font-bold mb-6 text-blue-950">Support</h4>
+          <h4 class="{{ Auth::check() ? 'text-white': 'text-blue-950' }} font-bold mb-6">Support</h4>
           <ul class="space-y-2">
             <li><a href="#" class="hover:underline">Contact Us</a></li>
             <li><a href="#" class="hover:underline">Help</a></li>
@@ -27,7 +27,7 @@
 
         <!-- Column 3 -->
         <div>
-          <h4 class="font-bold mb-6 text-blue-950">Company</h4>
+          <h4 class="{{ Auth::check() ? 'text-white': 'text-blue-950' }} font-bold mb-6">Company</h4>
           <ul class="space-y-2">
             <li><a href="#" class="hover:underline">About Us</a></li>
           </ul>

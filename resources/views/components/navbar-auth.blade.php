@@ -73,7 +73,14 @@
   <!-- Mobile Menu -->
   <div class="lg:hidden bg-[#0B1952] text-white" x-show="open" x-transition>
     <div class="px-4 py-4 space-y-2">
-      <a href="{{ route('myWorkspace') }}" class="block hover:underline">My Workspace</a>
+      @auth
+        @if(Auth::user()->hasAnyRole(['Admin', 'Super-Admin']))
+          <a href="{{ route('dashboard') }}" class="block hover:underline">Dashboard</a>
+        @else
+          <a href="{{ route('myWorkspace') }}" class="block hover:underline">My Workspace</a>
+        @endif
+      @endauth
+       
       <a href="{{ route('support') }}" class="block hover:underline">Support</a>
       <hr class="border-gray-600">
       <div class="text-sm mt-4">

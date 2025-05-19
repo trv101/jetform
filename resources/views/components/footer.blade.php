@@ -1,4 +1,4 @@
-<footer class="bg-gray-100 text-gray-700 mt-4">
+<footer class="{{ Auth::check() ? 'bg-[#0B1952] text-white' : 'bg-gray-100 text-gray-700' }}">
   
   <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
     <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 text-center sm:text-left">
@@ -28,3 +28,10 @@
     </div>
   </div>
 </footer>
+
+{{-- @auth
+                <div class="bg-[#0B1952] text-white">
+                @include('components.footer-links')
+                @include('components.footer')
+                </div>
+                @else --}}

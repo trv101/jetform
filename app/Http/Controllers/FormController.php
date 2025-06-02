@@ -1,22 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\form;
 
 use Illuminate\Http\Request;
+use App\Models\Form;
 
 class FormController extends Controller
 {
-    public function index()
+    
+
+    public function store()
     {
-        return view('form');
+        $form = Form::create([
+            'user_id' => auth()->id(),
+            'title' => 'Untitled Form',
+            'schema' => null,
+        ]);
+
+        return redirect()->route('form.builder', $form->id);
     }
-    public function store(Request $request)
-    {
-        $form = new Form;
-        $form->first_name = $request->first_name;
-        $form->last_name = $request->last_name;
-        $form->save();
-        return redirect('form')->with('status', 'Form submitted');
-    }
+
 }

@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->unsignedBigInteger('user_id');
+            $table->string('title');
+            $table->json('schema')->nullable(); // form fields as JSON
             $table->timestamps();
-        });
+});
+
     }
 
     /**

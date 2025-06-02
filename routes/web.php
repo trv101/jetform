@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FormBuilderController;
 
 
 Route::get('/', function () {
@@ -19,7 +21,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::view('/myWorkspace', 'pages.myWorkspace')->name('myWorkspace');
-    Route::get('/form-builder', [FormController::class, 'builder'])->name('form.builder');
+    // Route::view('/builder', 'form.builder')->name('form-builder');
+    //should delete this route
+    // Route::get('/form-builder', [FormController::class, 'builder'])->name('form.builder');
+    //
+    Route::get('/builder/{form}', [FormBuilderController::class, 'edit'])->name('form.builder');
+    Route::post('/builder/{form}', [FormBuilderController::class, 'update'])->name('form.update');
+    Route::post('/forms/create', [FormController::class, 'store'])->name('forms.store');
 
 
     

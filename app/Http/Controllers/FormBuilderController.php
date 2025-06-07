@@ -15,11 +15,14 @@ class FormBuilderController extends Controller
 
 public function update(Request $request, Form $form)
 {
+    \Log::info('Schema:', [$request->all()]); // Check logs
     $form->update([
-        'schema' => $request->input('schema'),
+        'schema' => $request->input('schema')
     ]);
 
     return response()->json(['status' => 'updated']);
 }
+
+
 
 }

@@ -37,11 +37,12 @@
                 @yield('content')
                 
             </main>
-            <div class="mt-auto">
-                @include('components.footer-links')
-                @include('components.footer')
-                
-            </div>
+            @unless (View::hasSection('hideFooter'))
+                <div class="mt-auto">
+                    @include('components.footer-links')
+                    @include('components.footer')
+                </div>
+            @endunless
         </div>
     </body>
 </html>

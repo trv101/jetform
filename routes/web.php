@@ -26,11 +26,9 @@ Route::middleware('auth')->group(function () {
     // Route::get('/form-builder', [FormController::class, 'builder'])->name('form.builder');
     //
     Route::get('/builder/{form}', [FormBuilderController::class, 'edit'])->name('form.builder');
-    Route::post('/builder/{form}', [FormBuilderController::class, 'update'])->name('form.update');
+    Route::put('/builder/{form}', [FormBuilderController::class, 'update'])->name('form.update');
     Route::post('/forms/create', [FormController::class, 'store'])->name('forms.store');
-
-
-    
+  
 });
 
 
